@@ -1,5 +1,6 @@
 # Competitive Programming Submissions
-A repo to store my successful submissions on different online judges. Progress updated every month.
+A repo to store my successful submissions on different online judges. Progress updated every month.<br>
+<i>Last updated 02.01.2022</i>
 
 ## Hackerrank
 <img src="https://i.ibb.co/fDTYGBn/Screenshot-2022-01-02-at-10-07-27-AM.png">
