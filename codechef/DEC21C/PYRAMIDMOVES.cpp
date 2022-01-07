@@ -10,7 +10,7 @@ const lli mod7=1e9+7;
 const int MAXXFF=1e5;
 
 lli fact[MAXXFF+1];
-
+//Took help from https://codeforces.com/blog/entry/78873
 ll codefpowmod(ll a, ll b, ll p){
     a %= p;
     if (a == 0) return 0;
