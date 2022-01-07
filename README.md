@@ -1,5 +1,5 @@
 # Competitive Programming Submissions
-A repo to store my successful submissions on different online judges. Progress updated every week.<br>
+A repo to store my successful submissions in Contests on different online judges. Progress updated every week.<br>
 <i>Last updated 07.01.2022</i>
 
 ### Profile Links:

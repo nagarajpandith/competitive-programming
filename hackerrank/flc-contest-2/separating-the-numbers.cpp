@@ -1,54 +1,16 @@
-#include <string>
-#include <iostream>
-
-static unsigned long long analyze(const std::string& str);
-
-int main(void) {
-    
-    int n;
-    std::cin >> n;
-    
-    std::string str;
-    unsigned long long ans;
-    while (n --> 0) {
-        std::cin >> str;
-        ans = analyze(str);
-        if (ans > 0) {
-            std::cout << "YES " << ans;
-        } else {
-            std::cout << "NO";
+//Bruteforcing seemed the only way at that time, but other approaches are good as well
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    string s, t, a;
+    cin.ignore(256, '\n');
+    while(cin >> s){
+        for(int l = 1; l <= s.size()/2 && s != t; l++){
+            a = t = s.substr(0, l);
+            for(int i = 1; t.size() < s.size(); i++)
+                t += to_string(stoll(a) + i);
         }
-        std::cout << '\n';
+        cout << (s == t ? "YES " + a : "NO") << endl;
     }
-    
-    return 0;
-}
-
-static unsigned long long analyze(const std::string& str) {
-    size_t count = 1, i, j;
-    
-    unsigned long long num;
-    std::string tmp;
-    while (count < str.length()) {
-        try {
-            num = std::stoull(str.substr(0, count));
-        } catch (...) {
-            return 0;
-        }
-        
-        i = 1;
-        j = count;
-        bool yes = true;
-        while (j < str.length() && yes) {
-            tmp = std::to_string(num + i++);
-            yes = yes && str.substr(j, tmp.length()) == tmp;
-            j += tmp.length();
-        }
-        if (yes)
-            return num;
-        
-        ++count;
-    }
-    
     return 0;
 }
